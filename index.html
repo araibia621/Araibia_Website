@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Araibia - AI Agents & Avatars for Enterprise | Intelligent Business Solutions</title>
+	<meta name="description" content="Araibia - AI Agents tailored to your business. Deploy intelligent avatars for healthcare, training, tourism, and customer support with enterprise-grade integration.">
+	<link rel="stylesheet" href="./css/styles.min.css">
+	<link rel="stylesheet" href="./css/default.css">
+	<link rel="stylesheet" href="./css/splide-core.min.css">
+	<link rel="stylesheet" href="./css/splide.min.css">
+	<link rel="icon" type="image/png" href="./assets/fav.png">
+</head>
+
+<body>
+
+	<div class="primary-navigation-container">
+		<div class="primary-navigation">
+			<div class="logo-container">
+				<a href="./index.html">
+					<img class="logo" src="./assets/logo.png" alt="Araibia logo" width="80">
+				</a>
+			</div>
+			<nav>
+				<ul class="primary-navigation-list">
+					<li><a href="./index.html#how-it-works">How it Works</a></li>
+					<li><a href="./index.html#industries">Industries</a></li>
+					<li><a href="./pricing.html">Pricing</a></li>
+					<li><a href="./index.html#resources">Resources</a></li>
+					<li><a href="./index.html#about-us">About Us</a></li>
+					<li class="show-on-mobile"><a href="#">Try an AI Agent Now</a></li>
+				</ul>
+			</nav>
+			<div class="action-container button-group">
+				<a href="#" class="button button-md button-primary">
+					Try an AI Agent Now
+				</a>
+			</div>
+			<div class="menu-container">
+				<svg onclick="toggleMenu()" class="icon opener" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 464.205 464.205">
+					<g>
+						<path d="M435.192 406.18H29.013C12.989 406.18 0 393.19 0 377.167s12.989-29.013 29.013-29.013h406.18c16.023 0 29.013 12.99 29.013 29.013-.001 16.023-12.99 29.013-29.014 29.013zM435.192 261.115H29.013C12.989 261.115 0 248.126 0 232.103s12.989-29.013 29.013-29.013h406.18c16.023 0 29.013 12.989 29.013 29.013s-12.99 29.012-29.014 29.012zM435.192 116.051H29.013C12.989 116.051 0 103.062 0 87.038s12.989-29.013 29.013-29.013h406.18c16.023 0 29.013 12.989 29.013 29.013s-12.99 29.013-29.014 29.013z"></path>
+					</g>
+				</svg>
+				<svg onclick="toggleMenu()" class="icon closer" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 329.269 329" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+					<g>
+						<path d="M194.8 164.77 323.013 36.555c8.343-8.34 8.343-21.825 0-30.164-8.34-8.34-21.825-8.34-30.164 0L164.633 134.605 36.422 6.391c-8.344-8.34-21.824-8.34-30.164 0-8.344 8.34-8.344 21.824 0 30.164l128.21 128.215L6.259 292.984c-8.344 8.34-8.344 21.825 0 30.164a21.266 21.266 0 0 0 15.082 6.25c5.46 0 10.922-2.09 15.082-6.25l128.21-128.214 128.216 128.214a21.273 21.273 0 0 0 15.082 6.25c5.46 0 10.922-2.09 15.082-6.25 8.343-8.34 8.343-21.824 0-30.164zm0 0"></path>
+					</g>
+				</svg>
+			</div>
+		</div>
+	</div>
+
+	<div class="hero bg-pattern primary-navigation-offset-top">
+		<div class="container">
+			<div class="display-flex justify-content-center">
+				<div class="hero-info hero-offset-top">
+					<div class="display-flex flex-column-reverse">
+						<div class="display-flex flex-column align-items-center">
+							<h1 class="heading heading-4xl">
+								<span class="color-primary-500 fw-600">Your Business + Araibia =</span><br />
+								<span class="gradient-text-1">Your New Customer Service Agent</span>
+							</h1>
+							<p class="text text-xl color-primary-400 margin-top-1.6 max-width-85">
+								Araibia brings your business to life with hyperrealistic AI agents that know your workflows inside out — delivering real-time, humanlike support on your website, app, or kiosk.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container section-margin-top-alt">
+			<div class="agents">
+				<div class="agent">
+					<img src="./assets/agent1.jpg" alt="nutrition advisor">
+					<span class="badge badge-md badge-primary light">Nutrition Advisor</span>
+				</div>
+				<div class="agent">
+					<img src="./assets/agent2.jpg" alt="motivational coach">
+					<span class="badge badge-md badge-primary light">Motivational Coach</span>
+				</div>
+				<div class="agent">
+					<img src="./assets/agent3.jpg" alt="training specialist">
+					<span class="badge badge-md badge-primary light">Training Specialist</span>
+				</div>
+			</div>
+		</div>
+		<div class="container section-margin-top" id="how-it-works">
+			<div class="display-flex flex-column justify-content-center align-items-center text-center">
+				<h2 class="heading heading-3xl">How Araibia Works: From Integration to Insights</h2>
+				<p class="text text-xl margin-top-1.6 max-width-85">
+					With Araibia, avatars don’t just talk, they connect, analyze, and measure, turning digital interactions
+					into enterprise-ready insights.
+				</p>
+			</div>
+			<div class="workflow-container section-margin-top-alt">
+				<div class="workflow gradient-border workflow-vertical">
+					<div class="workflow-row workflow-step">
+						<div class="workflow-column">
+							<div class="display-flex  gap-2">
+								<div class="counter flex-shrink-0">1</div>
+								<div>
+									<h3 class="heading heading-md max-width-30">Embed Anywhere</h3>
+									<p class="text text-lg margin-top-0.2 max-width-30">Add Araibia avatars as widgets.</p>
+								</div>
+							</div>
+						</div>
+						<div class="workflow-column">
+							<img class="workflow-column-img" src="./assets/embed.jpg" alt="embed anywhere">
+						</div>
+					</div>
+					<div class="workflow-row reverse workflow-step">
+						<div class="workflow-column">
+							<div class="display-flex gap-2">
+								<div class="counter flex-shrink-0">2</div>
+								<div>
+									<h3 class="heading heading-md max-width-30">Connect to Your Data</h3>
+									<p class="text text-lg margin-top-0.2 max-width-30">Link HR, CRM, and support tools for accurate answers.</p>
+								</div>
+							</div>
+						</div>
+						<div class="workflow-column">
+							<img class="workflow-column-img" src="./assets/connect-to-data.jpg" alt="connect to data">
+						</div>
+					</div>
+					<div class="workflow-row workflow-step">
+						<div class="workflow-column">
+							<div class="display-flex  gap-2">
+								<div class="counter flex-shrink-0">3</div>
+								<div>
+									<h3 class="heading heading-md max-width-30">Intelligent AI Enacts</h3>
+									<p class="text text-lg margin-top-0.2 max-width-30">Araibia avatars speak, respond, & assist in real time.</p>
+								</div>
+							</div>
+						</div>
+						<div class="workflow-column">
+							<img class="workflow-column-img" src="./assets/ai-enacts.jpg" alt="ai enacts">
+						</div>
+					</div>
+					<div class="workflow-row reverse workflow-step">
+						<div class="workflow-column">
+							<div class="display-flex gap-2">
+								<div class="counter flex-shrink-0">4</div>
+								<div>
+									<h3 class="heading heading-md max-width-30">Engagement Captured</h3>
+									<p class="text text-lg margin-top-0.2 max-width-30">Track interactions and measure impact.</p>
+								</div>
+							</div>
+						</div>
+						<div class="workflow-column">
+							<img class="workflow-column-img" src="./assets/engagement-captured.jpg" alt="engagement captured">
+						</div>
+					</div>
+					<div class="workflow-row workflow-step">
+						<div class="workflow-column">
+							<div class="display-flex  gap-2">
+								<div class="counter flex-shrink-0">5</div>
+								<div>
+									<h3 class="heading heading-md max-width-30">Dashboard Delivers Insight</h3>
+									<p class="text text-lg margin-top-0.2 max-width-30">
+										Analyze feedback through ROI dashboard.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="workflow-column">
+							<img class="workflow-column-img" src="./assets/dashboard-insights.jpg" alt="dashboard insights">
+						</div>
+					</div>
+					<img class="workflow-path" src="./assets/path.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section-margin-top" id="industries">
+		<div class="container">
+			<div class="section-header-1">
+				<div>
+					<h2 class="heading heading-3xl">Where Araibia Creates Value</h2>
+					<h3 class="heading heading-lg fw-700 margin-top-1">100+ Use Cases</h3>
+					<p class="text text-xl margin-top-1.6 max-width-70">
+						From HR to customer service, Araibia avatars and agents adapt to your business needs and deliver measurable results.
+					</p>
+				</div>
+				<div>
+					<a href="#" class="button button-primary button-xl">
+						Try an AI Agent Now
+					</a>
+				</div>
+			</div>
+			<div class="section-margin-top-alt">
+
+				<div class="display-flex align-items-center justify-content-end">
+					<div class="button-group" style="gap: 0.5rem;">
+						<div id="slide-1-prev" class="counter counter-sm flex-shrink-0 cursor-pointer">
+							<svg style="width:1.2rem;height: 1.2rem;" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M10.7997 19.2411C11.0247 19.0161 11.1511 18.7109 11.1511 18.3927C11.1511 18.0745 11.0247 17.7694 10.7997 17.5443L3.24812 9.99272L10.7997 2.44112C11.0183 2.2148 11.1393 1.91168 11.1365 1.59704C11.1338 1.28241 11.0076 0.981432 10.7851 0.758942C10.5626 0.536453 10.2616 0.41025 9.947 0.407516C9.63236 0.404782 9.32924 0.525735 9.10292 0.744325L1.55132 8.29593C1.10139 8.74599 0.848633 9.35633 0.848633 9.99272C0.848633 10.6291 1.10139 11.2395 1.55132 11.6895L9.10292 19.2411C9.32795 19.4661 9.63312 19.5925 9.95132 19.5925C10.2695 19.5925 10.5747 19.4661 10.7997 19.2411Z" fill="black" />
+							</svg>
+						</div>
+						<div id="slide-1-next" class="counter counter-sm flex-shrink-0 cursor-pointer">
+							<svg style="width:1.2rem;height: 1.2rem;" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M1.20028 19.2411C0.975313 19.0161 0.848935 18.7109 0.848935 18.3927C0.848935 18.0745 0.975313 17.7694 1.20028 17.5443L8.75188 9.99272L1.20028 2.44112C0.981689 2.2148 0.860736 1.91168 0.86347 1.59704C0.866204 1.28241 0.992408 0.981432 1.2149 0.758942C1.43739 0.536453 1.73836 0.41025 2.053 0.407516C2.36764 0.404782 2.67076 0.525735 2.89708 0.744325L10.4487 8.29593C10.8986 8.74599 11.1514 9.35633 11.1514 9.99272C11.1514 10.6291 10.8986 11.2395 10.4487 11.6895L2.89708 19.2411C2.67205 19.4661 2.36688 19.5925 2.04868 19.5925C1.73048 19.5925 1.42531 19.4661 1.20028 19.2411Z" fill="black" />
+							</svg>
+						</div>
+					</div>
+				</div>
+
+				<section id="image-carousel" class="splide slide-1 margin-top-2">
+					<div class="splide__track">
+						<ul class="splide__list">
+							<li class="splide__slide">
+								<div class="slide-1-card">
+									<div class="img-container">
+										<img src="./assets/healthcare-engagement.jpg" alt="">
+									</div>
+									<div class="info-container">
+										<h3 class="heading heading-sm">Healthcare & Patient Engagement</h3>
+										<p class="text text-md margin-top-1">
+											Guide patients with reliable information, appointment scheduling, and care instructions.
+										</p>
+									</div>
+								</div>
+								<p class="heading fs-1.6 fw-700 margin-top-1">
+									Healthcare & Patient Engagement
+								</p>
+							</li>
+							<li class="splide__slide">
+								<div class="slide-1-card">
+									<div class="img-container">
+										<img src="./assets/training-onboarding.jpg" alt="">
+									</div>
+									<div class="info-container">
+										<h3 class="heading heading-sm">Training & Onboarding</h3>
+										<p class="text text-md margin-top-1">
+											Deliver engaging, avatar-led training modules that adapt to learners’ pace and needs.
+										</p>
+									</div>
+								</div>
+								<p class="heading fs-1.6 fw-700 margin-top-1">
+									Training & Onboarding
+								</p>
+							</li>
+							<li class="splide__slide">
+								<div class="slide-1-card">
+									<div class="img-container">
+										<img src="./assets/sales-lead-generation.jpg" alt="">
+									</div>
+									<div class="info-container">
+										<h3 class="heading heading-sm">Sales & Lead Generation</h3>
+										<p class="text text-md margin-top-1">
+											Engage website visitors with interactive avatars that qualify leads and drive conversion.
+										</p>
+									</div>
+								</div>
+								<p class="heading fs-1.6 fw-700 margin-top-1">
+									Sales & Lead Generation
+								</p>
+							</li>
+							<li class="splide__slide">
+								<div class="slide-1-card">
+									<div class="img-container">
+										<img src="./assets/knowledge-hub.jpg" alt="">
+									</div>
+									<div class="info-container">
+										<h3 class="heading heading-sm">Knowledge Hubs</h3>
+										<p class="text text-md margin-top-1">
+											Make internal repositories and FAQs searchable through natural, human-like interactions.
+										</p>
+									</div>
+								</div>
+								<p class="heading fs-1.6 fw-700 margin-top-1">
+									Knowledge Hubs
+								</p>
+							</li>
+							<li class="splide__slide">
+								<div class="slide-1-card">
+									<div class="img-container">
+										<img src="./assets/hr-employee-assistance.jpg" alt="">
+									</div>
+									<div class="info-container">
+										<h3 class="heading heading-sm">HR & Employee Assistance</h3>
+										<p class="text text-md margin-top-1">
+											Help employees instantly access HR policies, benefits info, and internal knowledge.
+										</p>
+									</div>
+								</div>
+								<p class="heading fs-1.6 fw-700 margin-top-1">
+									HR & Employee Assistance
+								</p>
+							</li>
+							<li class="splide__slide">
+								<div class="slide-1-card">
+									<div class="img-container">
+										<img src="./assets/customer-support.jpg" alt="">
+									</div>
+									<div class="info-container">
+										<h3 class="heading heading-sm">Customer Support</h3>
+										<p class="text text-md margin-top-1">
+											Provide 24/7 intelligent responses to customer queries, reducing wait times.
+										</p>
+									</div>
+								</div>
+								<p class="heading fs-1.6 fw-700 margin-top-1">
+									Customer Support
+								</p>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="section-margin-top">
+		<div class="container">
+
+			<div class="display-flex flex-column justify-content-center align-items-center text-center">
+				<h2 class="heading heading-3xl text-center">What makes Araibia different</h2>
+				<p class="text text-xl text-center margin-top-1.6 max-width-70">
+					Our focus isn’t just creating faces, it’s about embedding AI agents into your workflows and proving value at scale.
+				</p>
+			</div>
+
+			<div class="information-section information-section-1 bg-color-frost section-margin-top-alt">
+				<div class="info">
+					<h3 class="heading heading-3xl">Beyond Avatars, True AI Agents</h3>
+					<p class="text text-lg margin-top-1.2 max-width-45">
+						Unlike avatar-only tools, Araibia is designed for scalable enterprise use, secure, integratable, and adaptable across industries.
+					</p>
+				</div>
+				<div class="images">
+					<img src="./assets/araibia2.jpg" alt="araibia 2">
+					<img src="./assets/araibia1.jpg" alt="araibia 1">
+				</div>
+
+			</div>
+
+			<div class="information-section-2 margin-top-2">
+				<div class="information-section bg-color-whisper">
+					<h3 class="heading heading-3xl">
+						Powering the Future of Enterprise
+					</h3>
+					<p class="text text-lg margin-top-1.2 max-width-45">
+						Araibia integrates seamlessly into enterprise systems, helping organizations deliver measurable results at scale.
+					</p>
+				</div>
+				<div class="information-section bg-color-porcelain">
+					<h3 class="heading heading-3xl">
+						Outcomes You Can Measure
+					</h3>
+					<p class="text text-lg margin-top-1.2 max-width-45">
+						Every interaction is tracked, analyzed, and turned into insights, helping you prove ROI and refine engagement strategies.
+					</p>
+					<div class="display-flex justify-content-center">
+						<img class="image margin-top-4" src="./assets/araibia3.jpg" alt="Araibia team collaboration">
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="section-margin-top">
+		<div class="container">
+
+			<div class="display-flex flex-column justify-content-center align-items-center text-center">
+				<h2 class="heading heading-3xl text-center max-width-85">
+					Frequently Asked Questions 
+				</h2>
+				<p class="text text-xl text-center margin-top-1.6 max-width-70">
+					Frequently Asked Questions offers quick answers to common queries, guiding users through features and functionalities effortlessly.
+				</p>
+			</div>
+
+			<div class="section-margin-top-alt">
+				<div class="faq-container">
+					<div class="accordion open">
+						<button class="accordion-header" aria-expanded="true">
+							<h3 class="accordion-title">What is an AI Avatar?</h3>
+							<svg class="accordion-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</button>
+						<div class="accordion-content">
+							<div class="accordion-content-inner">
+								<p class="accordion-text">An AI avatar is a hyper realistic digital representation of a human created using artificial intelligence. These avatars are capable of delivering human like speech, facial expressions, and gestures making them ideal for scalable video creation, virtual communication, and digital content.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion">
+						<button class="accordion-header" aria-expanded="false">
+							<h3 class="accordion-title">What is an AI avatar generator?</h3>
+							<svg class="accordion-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</button>
+						<div class="accordion-content">
+							<div class="accordion-content-inner">
+								<p class="accordion-text">An AI avatar generator is a sophisticated tool that creates lifelike digital representations using advanced artificial intelligence technology. It transforms photos or inputs into interactive avatars capable of speech, movement, and realistic expressions for various business applications.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion">
+						<button class="accordion-header" aria-expanded="false">
+							<h3 class="accordion-title">Can I create custom AI avatar for myself or teammate?</h3>
+							<svg class="accordion-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</button>
+						<div class="accordion-content">
+							<div class="accordion-content-inner">
+								<p class="accordion-text">Yes, absolutely! Araibia allows you to create custom AI avatars for yourself or your team members. Simply provide a high-quality photo and our platform will generate a personalized avatar that maintains the individual's unique characteristics while delivering professional, engaging interactions.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion">
+						<button class="accordion-header" aria-expanded="false">
+							<h3 class="accordion-title">How do I create AI avatar video with Araibia?</h3>
+							<svg class="accordion-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</button>
+						<div class="accordion-content">
+							<div class="accordion-content-inner">
+								<p class="accordion-text">Creating AI avatar videos with Araibia is simple: upload your content or script, select your preferred avatar, customize the voice and language settings, and our platform generates professional-quality videos. You can integrate these avatars directly into your websites, apps, or workflows for seamless user engagement.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion">
+						<button class="accordion-header" aria-expanded="false">
+							<h3 class="accordion-title">How realistic are Araibia's AI avatars?</h3>
+							<svg class="accordion-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</button>
+						<div class="accordion-content">
+							<div class="accordion-content-inner">
+								<p class="accordion-text">Araibia's AI avatars are incredibly realistic, featuring natural facial expressions, fluid lip-sync, and authentic human-like movements. Our advanced technology ensures high-quality visual output that creates genuine connections with users, making them perfect for professional business communications and customer interactions.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion">
+						<button class="accordion-header" aria-expanded="false">
+							<h3 class="accordion-title">Are Araibia's AI Agents secure? Can they run on-premise?</h3>
+							<svg class="accordion-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</button>
+						<div class="accordion-content">
+							<div class="accordion-content-inner">
+								<p class="accordion-text">Yes, Araibia prioritizes enterprise-grade security with end-to-end encryption, data privacy compliance, and secure API integrations. For organizations with strict security requirements, we offer on-premise deployment options that allow you to run Araibia's AI agents within your own infrastructure, ensuring complete data control and compliance with your internal security policies.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="cta-section bg-pattern-3 section-margin-top section-padding-top section-padding-bottom">
+		<div class="container">
+
+			<div class="display-flex justify-content-center">
+				<div class="max-width-85">
+
+
+					<h2 class="heading heading-3xl gradient-text-2">Get started with <span class="highlight">Araibia</span> today!</h2>
+
+					<p class="text text-xl margin-top-2 max-width-70">
+						Araibia delivers enterprise-grade AI Agents that integrate into your workflows, learn your business, and deliver measurable ROI. From patient engagement to onboarding, customer service, and beyond — Araibia transforms how organizations work.
+					</p>
+
+					<div class="display-flex justify-content-center">
+						<form class="cta-form margin-top-4">
+							<input type="email" class="input input-1" placeholder="Enter your email here" required>
+							<button type="submit" class="button button-primary">Get Started</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-brand">
+					<a href="./index.html" class="footer-logo">
+						<img src="./assets/logo-light.png" alt="Araibia logo">
+					</a>
+					<p class="text text-lg footer-description">
+						Intelligent AI Agents for Real Business Impact
+					</p>
+					<h3 class="heading heading-sm margin-top-3.2">Stay connected</h3>
+					<div class="footer-social margin-top-1.6">
+						<a href="#" class="footer-social-link" aria-label="Twitter">
+							<svg text text-lg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_162_125)">
+									<g clip-path="url(#clip1_162_125)">
+										<path d="M18.48 5.54024C17.88 5.80024 17.26 5.98024 16.6 6.06024C17.2908 5.65514 17.8047 5.00572 18.04 4.24024C17.4 4.62024 16.7 4.88024 15.96 5.04024C15.5104 4.55909 14.9264 4.22431 14.2841 4.07944C13.6417 3.93456 12.9705 3.98628 12.3579 4.22787C11.7453 4.46946 11.2196 4.88975 10.849 5.43411C10.4784 5.97847 10.2802 6.62172 10.28 7.28024C10.28 7.54024 10.3 7.78024 10.36 8.02024C7.64 7.90024 5.24 6.58024 3.62 4.60024C2.46 6.68024 3.76 8.40024 4.62 8.98024C4.1 8.98024 3.58 8.82024 3.14 8.58024C3.14 10.2002 4.28 11.5402 5.76 11.8402C5.44 11.9402 4.72 12.0002 4.28 11.9002C4.7 13.2002 5.92 14.1602 7.34 14.1802C6.22 15.0602 4.58 15.7602 2.48 15.5402C3.94 16.4802 5.66 17.0202 7.52 17.0202C13.56 17.0202 16.84 12.0202 16.84 7.70024C16.84 7.56024 16.84 7.42024 16.82 7.28024C17.4766 6.80836 18.0395 6.2183 18.48 5.54024Z" fill="white" />
+									</g>
+								</g>
+								<defs>
+									<clipPath id="clip0_162_125">
+										<rect width="20" height="20" fill="white" transform="translate(0.5 0.5)" />
+									</clipPath>
+									<clipPath id="clip1_162_125">
+										<rect width="20" height="20" fill="white" transform="translate(0.5 0.5)" />
+									</clipPath>
+								</defs>
+							</svg>
+
+						</a>
+						<a href="#" class="footer-social-link" aria-label="Facebook">
+							<svg text text-lg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_162_135)">
+									<g clip-path="url(#clip1_162_135)">
+										<path d="M8.58018 11.5395H6.60018C6.28018 11.5395 6.18018 11.4195 6.18018 11.1195V8.69953C6.18018 8.37953 6.30018 8.27953 6.60018 8.27953H8.58018V6.51953C8.58018 5.71953 8.72018 4.95953 9.12018 4.25953C9.54018 3.53953 10.1402 3.05953 10.9002 2.77953C11.4002 2.59953 11.9002 2.51953 12.4402 2.51953H14.4002C14.6802 2.51953 14.8002 2.63953 14.8002 2.91953V5.19953C14.8002 5.47953 14.6802 5.59953 14.4002 5.59953C13.8602 5.59953 13.3202 5.59953 12.7802 5.61953C12.2402 5.61953 11.9602 5.87953 11.9602 6.43953C11.9402 7.03953 11.9602 7.61953 11.9602 8.23953H14.2802C14.6002 8.23953 14.7202 8.35953 14.7202 8.67953V11.0995C14.7202 11.4195 14.6202 11.5195 14.2802 11.5195H11.9602V18.0395C11.9602 18.3795 11.8602 18.4995 11.5002 18.4995H9.00018C8.70018 18.4995 8.58018 18.3795 8.58018 18.0795V11.5395Z" fill="white" />
+									</g>
+								</g>
+								<defs>
+									<clipPath id="clip0_162_135">
+										<rect width="20" height="20" fill="white" transform="translate(0.5 0.5)" />
+									</clipPath>
+									<clipPath id="clip1_162_135">
+										<rect width="20" height="20" fill="white" transform="translate(0.5 0.5)" />
+									</clipPath>
+								</defs>
+							</svg>
+
+						</a>
+						<a href="#" class="footer-social-link" aria-label="LinkedIn">
+							<svg text text-lg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_162_144)">
+									<g clip-path="url(#clip1_162_144)">
+										<path d="M18.5 18.5V12.64C18.5 9.76 17.88 7.56 14.52 7.56C12.9 7.56 11.82 8.44 11.38 9.28H11.34V7.82H8.16V18.5H11.48V13.2C11.48 11.8 11.74 10.46 13.46 10.46C15.16 10.46 15.18 12.04 15.18 13.28V18.48H18.5V18.5ZM2.76 7.82H6.08V18.5H2.76V7.82ZM4.42 2.5C3.36 2.5 2.5 3.36 2.5 4.42C2.5 5.48 3.36 6.36 4.42 6.36C5.48 6.36 6.34 5.48 6.34 4.42C6.34 3.36 5.48 2.5 4.42 2.5Z" fill="white" />
+									</g>
+								</g>
+								<defs>
+									<clipPath id="clip0_162_144">
+										<rect width="20" height="20" fill="white" transform="translate(0.5 0.5)" />
+									</clipPath>
+									<clipPath id="clip1_162_144">
+										<rect width="20" height="20" fill="white" transform="translate(0.5 0.5)" />
+									</clipPath>
+								</defs>
+							</svg>
+
+						</a>
+						<a href="#" class="footer-social-link" aria-label="Instagram">
+							<svg text text-lg viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0_162_153)">
+									<g clip-path="url(#clip1_162_153)">
+										<path
+											d="M14.95 5.04999C14.6848 5.04999 14.4304 5.15535 14.2429 5.34289C14.0554 5.53042 13.95 5.78478 13.95 6.04999C13.95 6.31521 14.0554 6.56956 14.2429 6.7571C14.4304 6.94464 14.6848 7.04999 14.95 7.04999C15.2152 7.04999 15.4696 6.94464 15.6571 6.7571C15.8446 6.56956 15.95 6.31521 15.95 6.04999C15.95 5.78478 15.8446 5.53042 15.6571 5.34289C15.4696 5.15535 15.2152 5.04999 14.95 5.04999ZM18.783 7.06699C18.7669 6.37559 18.6376 5.6915 18.4 5.04199C18.188 4.48623 17.8581 3.98301 17.433 3.56699C17.0204 3.13964 16.516 2.81171 15.958 2.60799C15.3102 2.36337 14.6253 2.23113 13.933 2.21699C13.05 2.16699 12.767 2.16699 10.5 2.16699C8.233 2.16699 7.95 2.16699 7.066 2.21699C6.374 2.23123 5.68951 2.36346 5.042 2.60799C4.485 2.81372 3.98104 3.14138 3.567 3.56699C3.13962 3.97958 2.81169 4.48397 2.608 5.04199C2.36301 5.68976 2.23044 6.3746 2.216 7.06699C2.166 7.94999 2.166 8.23299 2.166 10.5C2.166 12.767 2.166 13.05 2.216 13.933C2.231 14.626 2.363 15.31 2.608 15.958C2.812 16.516 3.139 17.021 3.566 17.433C3.981 17.859 4.485 18.186 5.042 18.392C5.6895 18.6365 6.374 18.7688 7.066 18.783C7.95 18.833 8.233 18.833 10.5 18.833C12.767 18.833 13.05 18.833 13.933 18.783C14.6253 18.7689 15.3102 18.6367 15.958 18.392C16.516 18.1883 17.0204 17.8603 17.433 17.433C17.86 17.019 18.19 16.515 18.4 15.958C18.638 15.308 18.767 14.625 18.783 13.933C18.783 13.05 18.833 12.767 18.833 10.5C18.833 8.23299 18.833 7.94999 18.783 7.06699ZM17.283 13.833C17.277 14.3619 17.1813 14.8861 17 15.383C16.8667 15.7457 16.653 16.0736 16.375 16.342C16.105 16.617 15.777 16.83 15.416 16.967C14.9191 17.1483 14.395 17.244 13.866 17.25C13.033 17.292 12.725 17.3 10.533 17.3C8.342 17.3 8.033 17.3 7.2 17.25C6.65063 17.2603 6.10361 17.1757 5.583 17C5.23773 16.8567 4.9256 16.644 4.666 16.375C4.38969 16.1073 4.17889 15.7795 4.05 15.417C3.84657 14.9127 3.73384 14.3765 3.717 13.833C3.717 13 3.667 12.692 3.667 10.5C3.667 8.30799 3.667 7.99999 3.717 7.16699C3.72026 6.626 3.81877 6.08982 4.008 5.58299C4.15499 5.23143 4.38039 4.91811 4.667 4.66699C4.92 4.37999 5.233 4.15299 5.583 3.99999C6.09087 3.81685 6.62613 3.72116 7.166 3.71699C8 3.71699 8.308 3.66699 10.5 3.66699C12.691 3.66699 13 3.66699 13.833 3.71699C14.362 3.72295 14.8861 3.81864 15.383 3.99999C15.762 4.13999 16.102 4.36899 16.375 4.66699C16.648 4.92299 16.861 5.23599 17 5.58299C17.1847 6.0908 17.2804 6.62665 17.283 7.16699C17.325 7.99999 17.333 8.30799 17.333 10.5C17.333 12.692 17.325 13 17.283 13.833ZM10.5 6.22499C9.65483 6.22657 8.82909 6.47864 8.12712 6.94935C7.42515 7.42005 6.87846 8.08826 6.55612 8.86956C6.23379 9.65085 6.15027 10.5102 6.31612 11.3389C6.48198 12.1676 6.88976 12.9286 7.48795 13.5257C8.08613 14.1228 8.84788 14.5291 9.67693 14.6934C10.506 14.8577 11.3651 14.7726 12.1458 14.4488C12.9265 14.125 13.5937 13.5771 14.0631 12.8742C14.5325 12.1714 14.783 11.3452 14.783 10.5C14.7842 9.93758 14.6742 9.38049 14.4592 8.86076C14.2443 8.34104 13.9288 7.86893 13.5307 7.47162C13.1327 7.07431 12.66 6.75963 12.1398 6.54568C11.6197 6.33174 11.0624 6.22275 10.5 6.22499ZM10.5 13.275C10.1356 13.275 9.77473 13.2032 9.43805 13.0638C9.10138 12.9243 8.79546 12.7199 8.53778 12.4622C8.2801 12.2045 8.07569 11.8986 7.93623 11.5619C7.79678 11.2253 7.725 10.8644 7.725 10.5C7.725 10.1356 7.79678 9.77472 7.93623 9.43805C8.07569 9.10137 8.2801 8.79545 8.53778 8.53777C8.79546 8.28009 9.10138 8.07568 9.43805 7.93623C9.77473 7.79677 10.1356 7.72499 10.5 7.72499C11.236 7.72499 11.9418 8.01736 12.4622 8.53777C12.9826 9.05818 13.275 9.76402 13.275 10.5C13.275 11.236 12.9826 11.9418 12.4622 12.4622C11.9418 12.9826 11.236 13.275 10.5 13.275Z"
+											fill="white" />
+									</g>
+								</g>
+								<defs>
+									<clipPath id="clip0_162_153">
+										<rect width="20" height="20" fill="white" transform="translate(0.5 0.5)" />
+									</clipPath>
+									<clipPath id="clip1_162_153">
+										<rect width="20" height="20" fill="white" transform="translate(0.5 0.5)" />
+									</clipPath>
+								</defs>
+							</svg>
+
+						</a>
+					</div>
+				</div>
+
+				<div class="footer-section">
+					<h3 class="heading heading-sm">Solutions</h3>
+					<ul class="footer-links text text-lg">
+						<li><a href="#">Healthcare & Wellness Agents</a></li>
+						<li><a href="#">Training & Onboarding Agents</a></li>
+						<li><a href="#">Customer Support Agents</a></li>
+						<li><a href="#">Sales & Lead Generation</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-section">
+					<h3 class="heading heading-sm">Company</h3>
+					<ul class="footer-links text text-lg">
+						<li><a href="#">About Araibia</a></li>
+						<li><a href="#">Careers</a></li>
+						<li><a href="#">Trust & Safety</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Terms & Conditions</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-section">
+					<h3 class="heading heading-sm">Contact Us</h3>
+					<div class="footer-contact-item margin-top-2">
+						<svg class="footer-contact-icon" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_162_209)">
+								<g clip-path="url(#clip1_162_209)">
+									<path d="M15.5977 12.752L12.1657 13.417C9.84773 12.253 8.41573 10.917 7.58273 8.83299L8.22473 5.39199L7.01173 2.16699H4.22873C3.10173 2.16699 2.21473 3.09999 2.40073 4.21199C2.79873 6.58499 3.87173 10.539 6.74973 13.417C9.77273 16.44 14.0657 17.832 16.6377 18.429C17.7987 18.699 18.8327 17.791 18.8327 16.599V13.984L15.5977 12.752Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+								</g>
+							</g>
+							<defs>
+								<clipPath id="clip0_162_209">
+									<rect width="20" height="20" fill="white" transform="translate(0.5 0.5)" />
+								</clipPath>
+								<clipPath id="clip1_162_209">
+									<rect width="20" height="20" fill="white" transform="translate(0.5 0.5)" />
+								</clipPath>
+							</defs>
+						</svg>
+
+						<span class="text text-lg">
+							<a href="tel:+966 53 970 2582">+966 53 970 2582</a>
+						</span>
+					</div>
+					<div class="footer-contact-item">
+						<svg class="footer-contact-icon" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_162_222)">
+								<g clip-path="url(#clip1_162_222)">
+									<g clip-path="url(#clip2_162_222)">
+										<path d="M7.99998 8L11.75 10.5L15.5 8M2.99998 11.75H4.66698M1.33398 9.25H4.66698" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M4.66602 6.74999V6.66699C4.66602 6.13656 4.87673 5.62785 5.2518 5.25278C5.62687 4.87771 6.13558 4.66699 6.66602 4.66699H16.833C17.3634 4.66699 17.8722 4.87771 18.2472 5.25278C18.6223 5.62785 18.833 6.13656 18.833 6.66699V14.333C18.833 14.8634 18.6223 15.3721 18.2472 15.7472C17.8722 16.1223 17.3634 16.333 16.833 16.333H6.66602C6.13558 16.333 5.62687 16.1223 5.2518 15.7472C4.87673 15.3721 4.66602 14.8634 4.66602 14.333V14.25" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+									</g>
+								</g>
+							</g>
+							<defs>
+								<clipPath id="clip0_162_222">
+									<rect width="20" height="20" fill="white" transform="translate(0.5 0.5)" />
+								</clipPath>
+								<clipPath id="clip1_162_222">
+									<rect width="20" height="20" fill="white" transform="translate(0.5 0.5)" />
+								</clipPath>
+								<clipPath id="clip2_162_222">
+									<rect width="20" height="20" fill="white" transform="translate(0.5 0.5)" />
+								</clipPath>
+							</defs>
+						</svg>
+
+						<span class="text text-lg">
+							<a href="mailto:info@araibia.com">info@araibia.com</a>
+						</span>
+					</div>
+					<div class="footer-contact-item">
+						<svg class="footer-contact-icon" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_162_234)">
+								<g clip-path="url(#clip1_162_234)">
+									<path d="M17.1655 8.83263C17.1655 12.5146 10.4995 18.8326 10.4995 18.8326C10.4995 18.8326 3.83253 12.5146 3.83253 8.83263C3.82172 7.95031 3.98618 7.07461 4.31635 6.25632C4.64653 5.43803 5.13586 4.69342 5.75597 4.06566C6.37608 3.4379 7.11465 2.93949 7.92883 2.59932C8.74302 2.25915 9.61664 2.08398 10.499 2.08398C11.3814 2.08398 12.255 2.25915 13.0692 2.59932C13.8834 2.93949 14.622 3.4379 15.2421 4.06566C15.8622 4.69342 16.3515 5.43803 16.6817 6.25632C17.0119 7.07461 17.1763 7.95031 17.1655 8.83263Z" stroke="white" stroke-width="1.5" />
+									<path d="M10.4995 9.667C10.7206 9.667 10.9326 9.57919 11.0889 9.42287C11.2452 9.26656 11.333 9.05456 11.333 8.8335C11.333 8.61244 11.2452 8.40044 11.0889 8.24413C10.9326 8.08781 10.7206 8 10.4995 8C10.2785 8 10.0665 8.08781 9.91014 8.24413C9.75383 8.40044 9.66602 8.61244 9.66602 8.8335C9.66602 9.05456 9.75383 9.26656 9.91014 9.42287C10.0665 9.57919 10.2785 9.667 10.4995 9.667Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+								</g>
+							</g>
+							<defs>
+								<clipPath id="clip0_162_234">
+									<rect width="20" height="20" fill="white" transform="translate(0.5 0.5)" />
+								</clipPath>
+								<clipPath id="clip1_162_234">
+									<rect width="20" height="20" fill="white" transform="translate(0.5 0.5)" />
+								</clipPath>
+							</defs>
+						</svg>
+
+						<span class="text text-lg">Riyadh, Saudi Arabia</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				<p class="footer-copyright text text-lg">2025 ©Araibia. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- <div id="pricing-ai-agent" class="video-container-modal preview active">
+		<div class="video-container">
+			<img class="thumbnail" src="./assets/agent4-small.jpg" alt="agent">
+		</div>
+	</div> -->
+
+
+	<div onclick="this.style.display='none'" id="video-placeholder" style="cursor: pointer; position: fixed; right: 40px; bottom: 40px; width: 150px; height: 200px; border-radius: 20px; border: 2px solid #fff; box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.12); overflow: hidden; z-index: 10000; transition: opacity 0.3s, visibility 0.3s;">
+		<video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover;">
+			<source src="./assets/agent.mp4" type="video/mp4">
+		</video>
+	</div>
+
+   	
+	<script src="./js/script.js"></script>
+	<script src="./js/splide.min.js"></script>
+
+	<script>
+
+		let scrollY = 0;
+
+		document.addEventListener('scroll', () => {
+			scrollY = window.scrollY;
+		});
+
+		function initUseCaseSlider() {
+			let useCaseSlide = new Splide('#image-carousel', {
+				type: 'loop',
+				perPage: 5,
+				perMove: 1,
+				gap: '2rem',
+				arrows: false,
+				autoplay: true,
+				pagination: false,
+				breakpoints: {
+					1250: { perPage: 3 },
+					992: { perPage: 2 },
+					480: { perPage: 1 },
+				},
+			}).mount();
+
+			document.getElementById('slide-1-prev').addEventListener('click', () => useCaseSlide.go('<'));
+			document.getElementById('slide-1-next').addEventListener('click', () => useCaseSlide.go('>'));
+		}
+
+		initUseCaseSlider();
+	</script>
+
+	<script>!function(window){const host="https://labs.heygen.com",url=host+"/guest/streaming-embed?share=eyJxdWFsaXR5IjoiaGlnaCIsImF2YXRhck5hbWUiOiIxOTY5OWMzYzRlMzA0ZDcyYTlkZmIwNjQw%0D%0AZTE1YTA1MiIsInByZXZpZXdJbWciOiJodHRwczovL2ZpbGVzMi5oZXlnZW4uYWkvYXZhdGFyL3Yz%0D%0ALzE5Njk5YzNjNGUzMDRkNzJhOWRmYjA2NDBlMTVhMDUyL2Z1bGwvMi4yL3ByZXZpZXdfdGFyZ2V0%0D%0ALndlYnAiLCJuZWVkUmVtb3ZlQmFja2dyb3VuZCI6ZmFsc2UsImtub3dsZWRnZUJhc2VJZCI6ImRl%0D%0AbW8tMSIsInVzZXJuYW1lIjoiODgwNWY0Yzg5MTJkNGNiMjhmODQ2Nzg0YTQxOGQyNDIifQ%3D%3D&inIFrame=1",clientWidth=document.body.clientWidth,wrapDiv=document.createElement("div");wrapDiv.id="heygen-streaming-embed";const container=document.createElement("div");container.id="heygen-streaming-container";const stylesheet=document.createElement("style");stylesheet.innerHTML=`\n  #heygen-streaming-embed {\n    z-index: 9999;\n    position: fixed;\n    right: 40px;\n    bottom: 40px;\n    width: 150px;\n    height: 200px;\n    border-radius: 20px;\n    border: 2px solid #fff;\n    box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.12);\n    transition: all linear 0.1s;\n    overflow: hidden;\n\n    opacity: 0;\n    visibility: hidden;\n  }\n  #heygen-streaming-embed.show {\n    opacity: 1;\n    visibility: visible;\n  }\n  #heygen-streaming-embed.expand {\n    ${clientWidth<540?"height: 266px; width: 96%; left: 50%; transform: translateX(-50%);":"height: 366px; width: calc(366px * 16 / 9);"}\n    border: 0;\n    border-radius: 8px;\n  }\n  #heygen-streaming-container {\n    width: 100%;\n    height: 100%;\n  }\n  #heygen-streaming-container iframe {\n    width: 100%;\n    height: 100%;\n    border: 0;\n  }\n  `;const iframe=document.createElement("iframe");iframe.allowFullscreen=!1,iframe.title="Streaming Embed",iframe.role="dialog",iframe.allow="microphone",iframe.src=url;let visible=!1,initial=!1;window.addEventListener("message",(e=>{e.origin===host&&e.data&&e.data.type&&"streaming-embed"===e.data.type&&("init"===e.data.action?(initial=!0,wrapDiv.classList.toggle("show",initial)):"show"===e.data.action?(visible=!0,wrapDiv.classList.toggle("expand",visible)):"hide"===e.data.action&&(visible=!1,wrapDiv.classList.toggle("expand",visible)))})),container.appendChild(iframe),wrapDiv.appendChild(stylesheet),wrapDiv.appendChild(container),document.body.appendChild(wrapDiv)}(globalThis);</script>
+	
+
+</body>
+
+</html>
