@@ -72,20 +72,516 @@
 		</div>
 		<div class="container section-margin-top-alt">
 			<div class="agents">
-				<div class="agent">
-					<img src="./assets/agent1.jpg" alt="nutrition advisor">
-					<span class="badge badge-md badge-primary light">Nutrition Advisor</span>
+
+				<!-- Tier 1: Voice Only -->
+				<div class="agent avatar-tier-card" id="voice-card" onclick="toggleVoiceAgent(this)" style="cursor:pointer;">
+					<span class="badge badge-md badge-primary light avatar-tier-badge">Voice Only</span>
+					<div class="tier-inner">
+						<div class="voice-orb" id="voice-orb">
+							<div class="orb-blob ob1"></div>
+							<div class="orb-blob ob2"></div>
+							<div class="orb-blob ob3"></div>
+							<div class="orb-blob ob4"></div>
+						</div>
+						<p class="tier-label" id="voice-label">Voice Only</p>
+					</div>
 				</div>
-				<div class="agent">
-					<img src="./assets/agent2.jpg" alt="motivational coach">
-					<span class="badge badge-md badge-primary light">Motivational Coach</span>
+
+				<!-- Tier 2: Image to Avatar -->
+				<div class="agent avatar-tier-card" id="avatar-card" onclick="toggleAnamAvatar(this)" style="cursor:pointer;">
+					<span class="badge badge-md badge-primary light avatar-tier-badge">Image to Avatar</span>
+					<video id="anam-avatar" autoplay playsinline muted
+						style="width:100%; height:100%; object-fit:cover;">
+					</video>
 				</div>
-				<div class="agent">
-					<img src="./assets/agent3.jpg" alt="training specialist">
-					<span class="badge badge-md badge-primary light">Training Specialist</span>
+
+				<!-- Tier 3: Human Clone -->
+				<div class="agent avatar-tier-card" onclick="activateCard(this)" style="cursor:pointer;">
+					<span class="badge badge-md badge-primary light avatar-tier-badge">Human Clone</span>
+					<div class="tier-inner">
+						<div class="clone-wrap">
+							<div class="clone-glow"></div>
+							<svg viewBox="0 0 80 90" fill="none" xmlns="http://www.w3.org/2000/svg" class="clone-svg">
+								<circle cx="26" cy="22" r="12" fill="#9b85d9"/>
+								<path d="M4 72c0-12.15 9.85-22 22-22s22 9.85 22 22" fill="#b9a5de"/>
+								<circle cx="54" cy="22" r="12" fill="none" stroke="#776BC1" stroke-width="2" stroke-dasharray="4 3"/>
+								<path d="M32 72c0-12.15 9.85-22 22-22s22 9.85 22 22" fill="none" stroke="#776BC1" stroke-width="2" stroke-dasharray="4 3"/>
+								<line x1="54" y1="8" x2="54" y2="36" stroke="#564d7c" stroke-width="1" stroke-opacity="0.4"/>
+								<line x1="40" y1="22" x2="68" y2="22" stroke="#564d7c" stroke-width="1" stroke-opacity="0.4"/>
+							</svg>
+						</div>
+						<p class="tier-label">Human Clone</p>
+					</div>
 				</div>
+
 			</div>
 		</div>
+
+
+		<style>
+			/* ── Avatar Tier Cards ── */
+			.avatar-tier-card {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				overflow: hidden;
+				border-radius: 1.2rem;
+				background:
+					linear-gradient(#ede9f6, #f3edf5) padding-box,
+					linear-gradient(160deg, #c6b6e4 0%, #776BC1 55%, #382e62 100%) border-box;
+				border: 0.8rem solid transparent !important;
+				transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.35s ease;
+			}
+			.avatar-tier-card:hover {
+				transform: translateY(-6px);
+				box-shadow: 0 18px 44px rgba(119,107,193,0.16);
+			}
+			.avatar-tier-card.active {
+				transform: translateY(-14px);
+				box-shadow: 0 28px 60px rgba(119,107,193,0.28);
+			}
+
+			.avatar-tier-badge {
+				position: absolute;
+				top: 1.2rem;
+				right: 1rem;
+				z-index: 2;
+			}
+
+			.tier-inner {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 2rem;
+				padding: 2rem 1rem;
+				width: 100%;
+				height: 100%;
+			}
+
+			.tier-label {
+				font-family: 'Inter', sans-serif;
+				font-size: 0.95rem;
+				font-weight: 500;
+				color: #776BC1;
+				margin: 0;
+				letter-spacing: 0.04em;
+				text-transform: uppercase;
+			}
+
+			/* ── Sheer Cloud Orb ── */
+			.voice-orb {
+				position: relative;
+				width: 12rem;
+				height: 12rem;
+				animation: orbFloat 6s ease-in-out infinite;
+				/* no border-radius — blobs define the shape */
+			}
+
+			/* Each blob is a radial gradient fading fully to transparent
+			   so edges are wispy and cloud-like, never hard-clipped */
+			.orb-blob {
+				position: absolute;
+				border-radius: 50%;
+				mix-blend-mode: normal;
+			}
+
+			/* Large base — soft lavender centre, fades to nothing */
+			.ob1 {
+				inset: 5%;
+				background: radial-gradient(ellipse 80% 75% at 48% 52%,
+					rgba(210,185,255,0.55) 0%,
+					rgba(190,155,250,0.30) 38%,
+					transparent 72%);
+				filter: blur(10px);
+				animation: blobDrift1 9s ease-in-out infinite alternate;
+			}
+
+			/* Pink-purple hot spot, upper-left */
+			.ob2 {
+				inset: 10%;
+				background: radial-gradient(ellipse 65% 60% at 35% 38%,
+					rgba(230,160,255,0.65) 0%,
+					rgba(180,120,240,0.30) 40%,
+					transparent 68%);
+				filter: blur(14px);
+				animation: blobDrift2 11s ease-in-out infinite alternate;
+			}
+
+			/* Blue-purple glow, lower-right */
+			.ob3 {
+				inset: 8%;
+				background: radial-gradient(ellipse 55% 60% at 68% 64%,
+					rgba(150,120,255,0.50) 0%,
+					rgba(100,70,220,0.22) 42%,
+					transparent 70%);
+				filter: blur(12px);
+				animation: blobDrift3 13s ease-in-out infinite alternate;
+			}
+
+			/* Bright white highlight — gives the glass/sheer look */
+			.ob4 {
+				top: 10%; left: 20%;
+				width: 45%; height: 35%;
+				background: radial-gradient(ellipse,
+					rgba(255,255,255,0.72) 0%,
+					rgba(240,230,255,0.30) 45%,
+					transparent 75%);
+				filter: blur(6px);
+				animation: blobDrift4 8s ease-in-out infinite !important;
+			}
+			@keyframes blobDrift4 {
+				0%   { transform: translate(0, 0) scale(1) rotate(0deg); }
+				25%  { transform: translate(12px, -8px) scale(1.15) rotate(5deg); }
+				50%  { transform: translate(-8px, 6px) scale(0.9) rotate(-4deg); }
+				75%  { transform: translate(6px, 10px) scale(1.1) rotate(3deg); }
+				100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+			}
+
+			/* Idle — organic drift (not just up/down) */
+			@keyframes orbFloat {
+				0%   { transform: translate(0, 0) scale(1) rotate(0deg); }
+				25%  { transform: translate(5px, -8px) scale(1.03) rotate(2deg); }
+				50%  { transform: translate(-3px, -12px) scale(0.97) rotate(-1deg); }
+				75%  { transform: translate(-6px, -4px) scale(1.02) rotate(1.5deg); }
+				100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+			}
+			@keyframes blobDrift1 {
+				0%   { transform: scale(1) rotate(0deg) translate(0,0); }
+				33%  { transform: scale(1.06) rotate(8deg) translate(3px,-2px); }
+				66%  { transform: scale(0.95) rotate(-5deg) translate(-4px,3px); }
+				100% { transform: scale(1) rotate(0deg) translate(0,0); }
+			}
+			@keyframes blobDrift2 {
+				0%   { transform: scale(1) rotate(0deg) translate(0,0); }
+				33%  { transform: scale(1.1) rotate(-10deg) translate(-5px,4px); }
+				66%  { transform: scale(0.94) rotate(7deg) translate(3px,-5px); }
+				100% { transform: scale(1) rotate(0deg) translate(0,0); }
+			}
+			@keyframes blobDrift3 {
+				0%   { transform: scale(1) rotate(0deg) translate(0,0); }
+				33%  { transform: scale(1.04) rotate(6deg) translate(4px,2px); }
+				66%  { transform: scale(1.08) rotate(-8deg) translate(-3px,-4px); }
+				100% { transform: scale(1) rotate(0deg) translate(0,0); }
+			}
+
+			/* Speaking state — fast, energetic pulsing */
+			@keyframes orbSpeak {
+				0%   { transform: scale(1) rotate(0deg); }
+				15%  { transform: scale(1.12) rotate(3deg); }
+				30%  { transform: scale(0.95) rotate(-2deg); }
+				50%  { transform: scale(1.15) rotate(1deg); }
+				70%  { transform: scale(0.97) rotate(-3deg); }
+				85%  { transform: scale(1.1) rotate(2deg); }
+				100% { transform: scale(1) rotate(0deg); }
+			}
+			.voice-orb.speaking { animation: orbSpeak 1.8s ease-in-out infinite; }
+			.voice-orb.speaking .ob1 { animation-duration: 2s; filter: blur(5px); }
+			.voice-orb.speaking .ob2 { animation-duration: 1.4s; filter: blur(7px); }
+			.voice-orb.speaking .ob3 { animation-duration: 1.6s; }
+			.voice-orb.speaking .ob4 {
+				background: radial-gradient(ellipse,
+					rgba(255,255,255,0.85) 0%,
+					rgba(240,230,255,0.45) 45%,
+					transparent 75%);
+			}
+
+			/* Listening state — slow breathing */
+			@keyframes orbListen {
+				0%,100% { transform: scale(1); }
+				50%     { transform: scale(1.06); }
+			}
+			.voice-orb.listening { animation: orbListen 3s ease-in-out infinite; }
+			.voice-orb.listening .ob4 {
+				background: radial-gradient(ellipse,
+					rgba(255,255,255,0.9) 0%,
+					rgba(240,230,255,0.5) 45%,
+					transparent 75%);
+			}
+
+			/* ── Image to Avatar ── */
+			.img-av-row {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+			}
+			.img-av-box {
+				width: 5.5rem;
+				height: 5.5rem;
+				border-radius: 1.4rem;
+				background: #e0d8f0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border: 2px solid #c6b6e4;
+			}
+			.img-av-avatar { background: #ede9f6; }
+
+			/* ── Human Clone ── */
+			.clone-wrap {
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.clone-glow {
+				position: absolute;
+				width: 7rem;
+				height: 7rem;
+				border-radius: 50%;
+				background: radial-gradient(circle, rgba(119,107,193,0.2) 0%, transparent 70%);
+			}
+			.clone-svg { width: 7rem; height: auto; position: relative; z-index: 1; }
+
+			/* ── Modals ── */
+			.ara-overlay {
+				display: none;
+				position: fixed;
+				inset: 0;
+				background: rgba(18,6,68,0.55);
+				backdrop-filter: blur(6px);
+				z-index: 9999;
+				align-items: center;
+				justify-content: center;
+			}
+			.ara-overlay.open { display: flex; }
+
+			.ara-modal {
+				background: #ede9f6;
+				border-radius: 2.5rem;
+				padding: 3rem 2.5rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 1.8rem;
+				min-width: 22rem;
+				max-width: 90vw;
+				position: relative;
+				border: 3px solid transparent;
+				background:
+					linear-gradient(#ede9f6, #f3edf5) padding-box,
+					linear-gradient(160deg, #c6b6e4, #776BC1, #382e62) border-box;
+				box-shadow: 0 30px 80px rgba(80,50,160,0.25);
+			}
+
+			.ara-close {
+				position: absolute;
+				top: 1.2rem;
+				right: 1.4rem;
+				background: none;
+				border: none;
+				font-size: 1.2rem;
+				color: #564d7c;
+				cursor: pointer;
+				line-height: 1;
+				padding: 0.3rem 0.6rem;
+				border-radius: 50%;
+				transition: background 0.15s;
+			}
+			.ara-close:hover { background: rgba(119,107,193,0.12); }
+
+			.ara-modal-badge {
+				font-family: 'Inter', sans-serif;
+				font-size: 0.8rem;
+				font-weight: 600;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				color: #776BC1;
+				background: rgba(119,107,193,0.1);
+				padding: 0.35rem 1rem;
+				border-radius: 2rem;
+				margin: 0;
+			}
+
+			.ara-modal-hint {
+				font-family: 'Inter', sans-serif;
+				font-size: 0.9rem;
+				color: #9b93c4;
+				margin: 0;
+				text-align: center;
+			}
+
+			/* Coming soon panels */
+			.ara-coming-soon {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 1rem;
+				text-align: center;
+			}
+			.ara-coming-soon p {
+				font-family: 'Inter', sans-serif;
+				font-size: 1rem;
+				color: #564d7c;
+				margin: 0;
+				max-width: 18rem;
+			}
+			.coming-pill {
+				font-family: 'Inter', sans-serif;
+				font-size: 0.78rem;
+				font-weight: 600;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				color: #776BC1;
+				border: 1.5px solid #b9a5de;
+				padding: 0.3rem 1rem;
+				border-radius: 2rem;
+			}
+		</style>
+
+		<script>
+			/* Card lift — click to activate, click again to deactivate */
+			function activateCard(el) {
+				var isActive = el.classList.contains('active');
+				document.querySelectorAll('.avatar-tier-card').forEach(function(c) {
+					c.classList.remove('active');
+				});
+				if (!isActive) el.classList.add('active');
+
+				/* Stop other agents when a different card is clicked */
+				if (el.id !== 'voice-card') stopVoiceAgent();
+				if (el.id !== 'avatar-card') { stopAnamAvatar(); }
+			}
+
+			/* ── ElevenLabs Voice Agent (headless — no widget UI) ── */
+			var voiceConversation = null;
+
+			async function stopVoiceAgent() {
+				if (!voiceConversation) return;
+				await voiceConversation.endSession();
+				voiceConversation = null;
+				var orb = document.getElementById('voice-orb');
+				var label = document.getElementById('voice-label');
+				orb.classList.remove('speaking', 'listening');
+				label.textContent = 'Voice Only';
+			}
+
+			async function toggleVoiceAgent(el) {
+				var wasActive = el.classList.contains('active');
+				activateCard(el);
+
+				/* If it was already active (clicking again) or session exists, stop */
+				if (wasActive || voiceConversation) {
+					await stopVoiceAgent();
+					if (wasActive) el.classList.remove('active');
+					return;
+				}
+
+				var orb = document.getElementById('voice-orb');
+				var label = document.getElementById('voice-label');
+
+				/* Start a new session */
+				label.textContent = 'Connecting...';
+				try {
+					var module = await import('https://esm.sh/@elevenlabs/client');
+					var Conversation = module.Conversation;
+
+					/* Request mic permission */
+					await navigator.mediaDevices.getUserMedia({ audio: true });
+
+					voiceConversation = await Conversation.startSession({
+						agentId: 'agent_7001kjghy74nf97t8490np7vghv2',
+						onConnect: function() {
+							label.textContent = 'Listening...';
+							orb.classList.add('listening');
+						},
+						onDisconnect: function() {
+							voiceConversation = null;
+							orb.classList.remove('speaking', 'listening');
+							label.textContent = 'Voice Only';
+						},
+						onModeChange: function(mode) {
+							orb.classList.remove('speaking', 'listening');
+							if (mode.mode === 'speaking') {
+								orb.classList.add('speaking');
+								label.textContent = 'Speaking...';
+							} else {
+								orb.classList.add('listening');
+								label.textContent = 'Listening...';
+							}
+						},
+						onError: function(error) {
+							console.error('ElevenLabs error:', error);
+							label.textContent = 'Error — try again';
+							orb.classList.remove('speaking', 'listening');
+							voiceConversation = null;
+						}
+					});
+				} catch (err) {
+					console.error('Failed to start voice agent:', err);
+					label.textContent = 'Mic denied — try again';
+					setTimeout(function() { label.textContent = 'Voice Only'; }, 3000);
+				}
+			}
+
+			/* ── Anam Image-to-Avatar Agent ── */
+			var anamClient = null;
+			var anamActive = false;
+			var anamCreateClient = null;
+
+			async function startAnamStream() {
+				try {
+					if (!anamCreateClient) {
+						var mod = await import('https://esm.sh/@anam-ai/js-sdk@4.10.0');
+						anamCreateClient = mod.createClient;
+					}
+					var res = await fetch('/api/anam/session', {
+						method: 'POST',
+						headers: { 'Content-Type': 'application/json' },
+						body: JSON.stringify({
+							personaConfig: {
+								personaId: '270343e0-a221-42b1-8b13-a314cb6efb57',
+								skipGreeting: true
+							}
+						})
+					});
+					if (!res.ok) throw new Error('Session failed: ' + res.status);
+					var data = await res.json();
+					if (!data.sessionToken) throw new Error('No sessionToken');
+
+					anamClient = anamCreateClient(data.sessionToken);
+					await anamClient.streamToVideoElement('anam-avatar');
+					/* Mute mic so avatar stays idle */
+					anamClient.muteInputAudio();
+					anamActive = false;
+				} catch (err) {
+					console.error('Anam avatar error:', err);
+				}
+			}
+
+			function stopAnamAvatar() {
+				if (!anamClient) return;
+				if (anamActive) {
+					/* Mute mic and video audio output */
+					try { anamClient.muteInputAudio(); } catch(e) {}
+					document.getElementById('anam-avatar').muted = true;
+					anamActive = false;
+				}
+			}
+
+			function toggleAnamAvatar(el) {
+				activateCard(el);
+				if (!anamClient) return;
+				var vid = document.getElementById('anam-avatar');
+
+				if (anamActive) {
+					/* Deactivate: mute everything */
+					anamClient.muteInputAudio();
+					vid.muted = true;
+					anamActive = false;
+				} else {
+					/* Activate: unmute mic and audio output */
+					anamClient.unmuteInputAudio();
+					vid.muted = false;
+					anamActive = true;
+				}
+			}
+
+			/* Auto-start avatar stream on page load (muted) */
+			startAnamStream();
+		</script>
 		<div class="container section-margin-top" id="how-it-works">
 			<div class="display-flex flex-column justify-content-center align-items-center text-center">
 				<h2 class="heading heading-3xl">How Araibia Works: From Integration to Insights</h2>
@@ -728,8 +1224,9 @@
 		initUseCaseSlider();
 	</script>
 
-	<script>!function(window){const host="https://labs.heygen.com",url=host+"/guest/streaming-embed?share=eyJxdWFsaXR5IjoiaGlnaCIsImF2YXRhck5hbWUiOiIxOTY5OWMzYzRlMzA0ZDcyYTlkZmIwNjQw%0D%0AZTE1YTA1MiIsInByZXZpZXdJbWciOiJodHRwczovL2ZpbGVzMi5oZXlnZW4uYWkvYXZhdGFyL3Yz%0D%0ALzE5Njk5YzNjNGUzMDRkNzJhOWRmYjA2NDBlMTVhMDUyL2Z1bGwvMi4yL3ByZXZpZXdfdGFyZ2V0%0D%0ALndlYnAiLCJuZWVkUmVtb3ZlQmFja2dyb3VuZCI6ZmFsc2UsImtub3dsZWRnZUJhc2VJZCI6ImRl%0D%0AbW8tMSIsInVzZXJuYW1lIjoiODgwNWY0Yzg5MTJkNGNiMjhmODQ2Nzg0YTQxOGQyNDIifQ%3D%3D&inIFrame=1",clientWidth=document.body.clientWidth,wrapDiv=document.createElement("div");wrapDiv.id="heygen-streaming-embed";const container=document.createElement("div");container.id="heygen-streaming-container";const stylesheet=document.createElement("style");stylesheet.innerHTML=`\n  #heygen-streaming-embed {\n    z-index: 9999;\n    position: fixed;\n    right: 40px;\n    bottom: 40px;\n    width: 150px;\n    height: 200px;\n    border-radius: 20px;\n    border: 2px solid #fff;\n    box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.12);\n    transition: all linear 0.1s;\n    overflow: hidden;\n\n    opacity: 0;\n    visibility: hidden;\n  }\n  #heygen-streaming-embed.show {\n    opacity: 1;\n    visibility: visible;\n  }\n  #heygen-streaming-embed.expand {\n    ${clientWidth<540?"height: 266px; width: 96%; left: 50%; transform: translateX(-50%);":"height: 366px; width: calc(366px * 16 / 9);"}\n    border: 0;\n    border-radius: 8px;\n  }\n  #heygen-streaming-container {\n    width: 100%;\n    height: 100%;\n  }\n  #heygen-streaming-container iframe {\n    width: 100%;\n    height: 100%;\n    border: 0;\n  }\n  `;const iframe=document.createElement("iframe");iframe.allowFullscreen=!1,iframe.title="Streaming Embed",iframe.role="dialog",iframe.allow="microphone",iframe.src=url;let visible=!1,initial=!1;window.addEventListener("message",(e=>{e.origin===host&&e.data&&e.data.type&&"streaming-embed"===e.data.type&&("init"===e.data.action?(initial=!0,wrapDiv.classList.toggle("show",initial)):"show"===e.data.action?(visible=!0,wrapDiv.classList.toggle("expand",visible)):"hide"===e.data.action&&(visible=!1,wrapDiv.classList.toggle("expand",visible)))})),container.appendChild(iframe),wrapDiv.appendChild(stylesheet),wrapDiv.appendChild(container),document.body.appendChild(wrapDiv)}(globalThis);</script>
-	
+
+
+
 
 </body>
 

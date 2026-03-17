@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -X POST http://localhost:3000/api/anam/session -H \"Content-Type: application/json\" -d '{\"\"personaConfig\"\":{\"\"personaId\"\":\"\"270343e0-a221-42b1-8b13-a314cb6efb57\"\"}}')",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/anam-org/javascript-sdk/main/README.md\")",
+      "Bash(curl -sI \"https://esm.sh/@anam-ai/js-sdk\")"
+    ]
+  }
+}
